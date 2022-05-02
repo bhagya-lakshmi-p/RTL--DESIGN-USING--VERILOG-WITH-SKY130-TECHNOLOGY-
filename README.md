@@ -108,8 +108,7 @@ here, Yosys used as synthesizer tool.
 It is the representation of the design 
   in the form of standard cell
 
-![image](https://user-images.githubusercontent.com/104748496/166217598-36b77345-5b37-441a-8719-744f707203f4.png) 
-![image](https://user-images.githubusercontent.com/104748496/166223559-f4442675-dc5e-4480-ae32-994694ddab82.png)
+![image](https://user-images.githubusercontent.com/104748496/166227407-47826a6b-6175-4b91-9075-c60fdec14028.png)
 
 LOGIC SYNTHESIS:
 
