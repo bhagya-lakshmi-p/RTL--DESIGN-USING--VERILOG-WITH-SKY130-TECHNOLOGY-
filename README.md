@@ -46,3 +46,21 @@ Day5-If case, for loop and for generate
       .for loop and for generate
       
       .Labs on for loopand for generate
+
+
+
+DAY1: Introduction to verilog RTL Design and Synthesis 
+
+RTL Design is the implementation of specification written in the verilog code or set of verilog code ,it will be verified by the simulating the design with the help of simulator.
+In this workshop "iverilog" is used for the simulation.
+Tool used for the simulation is called as simulator. i.e, iverilog
+
+To check whether design is meeting all the required specification or not is done by applying the stimulus to the design in the test bench(TB).
+
+TB instantiate the design
+TB not having any primary inputs or the primary outputs but design may have one or more than one primary inputs and primary outputs
+
+Test bench
+
+design
+![image](https://user-images.githubusercontent.com/104748496/166209489-bd1d269c-f7e1-498b-97a1-2812891bb7d1.png)
