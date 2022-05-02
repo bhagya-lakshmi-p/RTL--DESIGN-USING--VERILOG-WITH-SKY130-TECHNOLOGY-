@@ -36,7 +36,7 @@ Day4-GLS,blocking vs non-blocking and Synthesis-Simulation mismatch
       
       .Labs on Synthesis-Simulation mismatch for blocking statement
       
-If case, forloop and for generate
+Day5-If case, for loop and for generate
       .If case construct
       
       .Labs on incomplete If case
