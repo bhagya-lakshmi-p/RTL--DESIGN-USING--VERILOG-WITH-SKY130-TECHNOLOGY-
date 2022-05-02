@@ -371,7 +371,156 @@ show
 
 ![counter_optshow map](https://user-images.githubusercontent.com/104748496/166269926-c2004b11-213c-4f7e-b9fa-85a44c1ede64.PNG) 
 
-![image](https://user-images.githubusercontent.com/104748496/166270275-9c3ff104-96d3-44af-823d-385588ef2228.png)
+GLS stands for gate level simulation. RTL code validated by testing as per the specifications. Run the testbench in the GLS with the netlist as the design under test, as the netlist wil be fit in the place of the RTL code as both meets the same.
+
+Why run GLS? 
+
+To verify the logical correctness of the design after synthesis During simulation there is notion of timing, but for the desing to work the timing playa a key role it should be met. The GLS should be run with the delay annotation.
+
+GLS USING IVERILOG
+
+The desing is the netlist, we need to read the gate level verilog models in addtion to the regular steps in the part of simulation including the design, testbench, gtkwave form viewer.
+
+![image](https://user-images.githubusercontent.com/104748496/166272146-47afdbd8-d74b-452d-b478-739359495f9e.png)
+
+GLS SYNTHESIS AND SIMULATION MISMATCH
+
+Major reasons are
+
+missing sensitivity list
+
+blocking and non - blocking assignments
+
+MISSING SENSITIVITY LIST
+
+In verilog simulator works based on activity of the change in the inputs, no activity the output is not evaluated. In a MUX is evaluated only when the select is changing it also concerns the process, when the select is low activity on input0 when the select is high activity on input1 during RTL simulation it looks like a latch as the entire process depends on the select line in the mux. The correct way of the code is :
+
+module mux(input i0, input i1, input sel,output reg y)
+always@(*)
+begin
+if(sel)
+y=i1;
+else
+y=i0;
+end
+endmodule 
+
+BLOCKING AND NON - BLOCKING ASSIGNMENTS
+
+The blocking and non - blocking comes under picture when we use always block. 
+
+Blocking statement - It executes in the order of statement written. 
+
+Non - Blocking statement - it is mostly parallel evaluation of the statements. It executes the RHS and assigns to the LHS, the order does'nt matters here.
+
+![ternary_operator](https://user-images.githubusercontent.com/104748496/166285653-2d72aa6a-6293-4b36-8319-00459ba7d813.PNG)
+
+![ternary_operator_mux static](https://user-images.githubusercontent.com/104748496/166286503-61fdc9a7-a3c4-4afe-b47b-015e3b613551.PNG)
+
+![ternary_operator_mux result](https://user-images.githubusercontent.com/104748496/166287218-7686a365-c8e0-4f80-a99f-ceea71debc0a.PNG)
+
+![ternary_operator_mux show](https://user-images.githubusercontent.com/104748496/166288121-9be0876d-41f2-4c95-a70c-6deb49a06d09.PNG)
+
+![ternary_operator_mux](https://user-images.githubusercontent.com/104748496/166288521-c4255a39-c482-40b5-bf0c-c2d7dcfa5389.PNG)
+
+![blocking code](https://user-images.githubusercontent.com/104748496/166288946-c8c1b834-fb4f-4ba3-a959-c464e1f99126.PNG)
+
+![blocking static](https://user-images.githubusercontent.com/104748496/166289006-f720c68e-978f-44df-9a01-8066ece56c18.PNG)
+
+![blocking_caveat](https://user-images.githubusercontent.com/104748496/166289059-b7d1765d-5148-4bc9-a69b-2fb0b96471d8.PNG)
+
+![blocking show](https://user-images.githubusercontent.com/104748496/166289184-6f8e1a9b-d4dd-4b95-8a72-100d0d834b50.PNG)
+
+Day5-If case, for loop and for generate
+
+if case : priority logic
+
+syntax:
+
+ if<condition>
+   begin 
+    ----
+    ----
+   end
+  else  
+   begin 
+   ----
+   ----
+   end
 
 
 
+if<condition>
+   begin 
+    ----
+    ----
+   end
+  elseif  
+   begin 
+   ----
+   ----
+   end
+  elseif  
+   begin 
+   ----
+   ----
+   end
+ else
+   ---
+   ----
+
+
+![danger cond if](https://user-images.githubusercontent.com/104748496/166290823-709e3ab2-c221-4463-b69e-b1e44bde1d8f.PNG)
+	
+![counter if](https://user-images.githubusercontent.com/104748496/166291095-bbedfaef-43e1-4da2-93c1-4ff4bd811b20.PNG)
+	
+![caveate case](https://user-images.githubusercontent.com/104748496/166291483-59e0404e-9ab0-4eb6-8033-5b29fa6fb841.PNG)
+	
+![partial assign](https://user-images.githubusercontent.com/104748496/166291769-a1a59d4b-5d96-4323-81d0-874f692c21ff.PNG)
+	
+module incomp_if (input i0 , input i1 , input i2 , output reg y);
+always @ (*)
+begin
+	if(i0)
+		y <= i1;
+end
+endmodule
+	
+![incomp_if static](https://user-images.githubusercontent.com/104748496/166292053-80a27979-eac4-4b2e-b7d7-57ae7586171d.PNG)
+
+![incomp_if map](https://user-images.githubusercontent.com/104748496/166292116-dea45230-56a8-49b1-a26a-939057708ed6.PNG)
+	
+![incomp_if gtk](https://user-images.githubusercontent.com/104748496/166292169-c06bcbd5-2c9a-4c72-b265-5573f6abd2f0.PN
+	
+FOR LOOP AND FOR GENERATE
+		       
+for loop - used inside always
+		       
+generate followed by for loop - used outside always Generate for loop is used for instantiate the hardware multiple times. The plain for loop used in always is used for evaluating expressions	
+	
+![for loop](https://user-images.githubusercontent.com/104748496/166293692-033d93c6-2e7d-4268-bed8-460d29b65cd8.PNG)
+
+module demux_case (output o0 , output o1, output o2 , output o3, output o4, output o5, output o6 , output o7 , input [2:0] sel  , input i);
+reg [7:0]y_int;
+assign {o7,o6,o5,o4,o3,o2,o1,o0} = y_int;
+integer k;
+always @ (*)
+begin
+y_int = 8'b0;
+	case(sel)
+		3'b000 : y_int[0] = i;
+		3'b001 : y_int[1] = i;
+		3'b010 : y_int[2] = i;
+		3'b011 : y_int[3] = i;
+		3'b100 : y_int[4] = i;
+		3'b101 : y_int[5] = i;
+		3'b110 : y_int[6] = i;
+		3'b111 : y_int[7] = i;
+	endcase
+			
+![demux_case static](https://user-images.githubusercontent.com/104748496/166294230-89151600-d4f7-4e7f-9271-cb10628ff61c.PNG)
+			
+![demux_case](https://user-images.githubusercontent.com/104748496/166294343-aeed2add-1769-4cb9-8abb-50962b08702a.PNG)
+			
+![demux_case show](https://user-images.githubusercontent.com/104748496/166294780-0df9756f-5592-4a25-9895-69db2705d28d.PNG)
+		
