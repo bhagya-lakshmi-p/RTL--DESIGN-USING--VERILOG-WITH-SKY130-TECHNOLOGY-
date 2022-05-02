@@ -1,10 +1,17 @@
 # RTL DESIGN USING VERILOG WITH SKY130 TECHNOLOGY
+
 Course Content Index
+
 Day1-Introduction to Verilog RTL design and synthesis
+
       .Introduction to open-source simulatoriverilog
+      
       .Labs using iverilog and gtkwave
+      
       .Introduction to Yosys and logic synthesis
+      
       .Labs using Yosys and SKY130 PDKs
+      
 day2-timing libs,hierarchical vs flat synthesis and efficient flop coding styles
       .Introduction to timing .libs
       .Hierarchical vs Flat synthesis
