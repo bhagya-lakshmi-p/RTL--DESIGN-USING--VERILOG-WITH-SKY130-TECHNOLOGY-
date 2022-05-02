@@ -196,3 +196,50 @@ exit
 ![yosys 1](https://user-images.githubusercontent.com/104748496/166236787-3358b43b-7c35-4f36-810c-b0760b6c8e76.PNG)
 
 
+Day2: Hierachial and Flat synthesis
+
+
+![library](https://user-images.githubusercontent.com/104748496/166238961-4b9f1629-64cc-4ee8-bbc1-b22375c6b5bb.PNG)
+
+Library files
+
+The library file used is sky130_fd_sc_hd_tt_025C_1v80.lib. The nomenclature for library has some meaning and shows important parameters most importantly the Process,Temperature and Voltage.
+
+These parameters are show in the end of the name "tt_025C_1v80".
+
+  .tt means the process is "typical"
+
+  .025C shows the temperature - 25 degree celsius
+
+  .1v80 shows the voltage - 1.8V
+
+![libraryparameter](https://user-images.githubusercontent.com/104748496/166239091-eeee0642-192f-4e6c-b666-bd8c56bcb01c.PNG)
+
+
+Flavours of standard cells
+
+As mentioned before, the library contains different flavours of same logic gates. This is done mainly to meet timing constraints.
+
+Faster cells increases the clock frequency. T(clk) > T(cq_launch_flop) + T(combi) +T(setup_capture_flop)
+
+Slower cells are required to prevent hold violations. T(hold_capture_flop) < T(cq_launch_flop) + T(combi)
+
+These different flavours are named different within the library. For example, the different flavours of and gate present are:
+
+based on delay: sky130_fd_sc_hd_and2_0 > sky130_fd_sc_hd_and2_2 > sky130_fd_sc_hd_and2_4
+
+based on power/area: sky130_fd_sc_hd_and2_0 < sky130_fd_sc_hd_and2_2 < sky130_fd_sc_hd_and2_4
+
+
+            Hierarchical synthesis                                    Flat synthesis
+
+>> Top module is synthesised in terms of sub-modules.      >> All sub-modules are also expanded and the top module is sysnthesised in terms of standard cells. 
+
+>> Only the higher level abstraction is required.          >> It has lower abstraction compared to hierarchial synthesis. 
+ 
+                                                           >> Flatten is the command to write out the flat netlist.
+                                                           
+Why submodule synthesis?
+.when we have multiple instance of same module
+. divide and conquer when massive.
+
