@@ -238,3 +238,9 @@ Why submodule synthesis?
 
 . divide and conquer when massive.
 
+![multiple](https://user-images.githubusercontent.com/104748496/166244780-f2ed7d87-4d2a-489a-81c5-d2cef43e797c.PNG)
+
+![multiple_modules](https://user-images.githubusercontent.com/104748496/166245111-42f1bf05-cc66-4357-99bf-a34c70c51e34.PNG)
+
+![Capturmodule flat](https://user-images.githubusercontent.com/104748496/166245923-53fdc44c-dc07-4034-9e60-f97478bc1989.PNG)
+
