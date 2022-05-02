@@ -163,3 +163,36 @@ What is .lib?
   
 ![image](https://user-images.githubusercontent.com/104748496/166228722-8cf323e3-fcb2-40fd-939b-c6d49eb2da02.png)
 
+tclk is the minimum clk period needed and fclk will be the maximum clk frequency. For the maximum performance the delay should be minimum, this can be acheived by faster cells which eliminates the requirement of the medium and slow cells.
+
+Requirement of Slow cells
+
+For the  hold related time issues in the flop b, there is requiremnt of slow cells, where the delay should be minimum. Thus we require fast cells to meet the performance and slow cells to meet the hold. 
+
+The load in the digital logic circuits is the capacitance, the faster the charging and the discharging of the capacitance lesser the cell delay.
+
+wide transistors provide more delay and less area and power.
+
+narrow transistors provide more delay and less area and power.
+
+![synthesis illustration](https://user-images.githubusercontent.com/104748496/166235181-5b0ad691-d3f7-4c21-9ec9-9c83fb87975b.PNG)
+
+//for invoke yosys
+
+yosys
+
+read_liberty -lib ../my_lib/lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+
+read_verilog designmodule.v
+
+synth -top modulename
+
+abc -liberty ../my_lib/lib/sky130_fd_sc_hd_tt_025C_1v80.lib
+
+show
+
+exit
+
+![yosys 1](https://user-images.githubusercontent.com/104748496/166236787-3358b43b-7c35-4f36-810c-b0760b6c8e76.PNG)
+
+
