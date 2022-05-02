@@ -52,12 +52,15 @@ Day5-If case, for loop and for generate
 DAY1: Introduction to verilog RTL Design and Synthesis 
 
 RTL Design is the implementation of specification written in the verilog code or set of verilog code ,it will be verified by the simulating the design with the help of simulator.
+
 In this workshop "iverilog" is used for the simulation.
+
 Tool used for the simulation is called as simulator. i.e, iverilog
 
 To check whether design is meeting all the required specification or not is done by applying the stimulus to the design in the test bench(TB).
 
 TB instantiate the design
+
 TB not having any primary inputs or the primary outputs but design may have one or more than one primary inputs and primary outputs
 
 ![image](https://user-images.githubusercontent.com/104748496/166209855-65423a99-f0cd-4dca-bd8c-ea263025a322.png)
@@ -83,4 +86,14 @@ Environment setup:
              .verilog files contain all lab files (experiment)
              
  ![gitclone](https://user-images.githubusercontent.com/104748496/166213657-98ce0bb5-7657-4ba4-860c-1ef77f05bf42.PNG)
+ 
+ How to work with iverilog and gtkwave?
+ design folder-->verilog_files
+ 
+ load the design to the verilog by using commond-- (iverilog module name.v tb_module name.v)
+ a.out file created and dumpthe tb_modulename.vcd file(./a.out)
+ load the vcdfile to the simulator to view the wave( gtkwave tb_modulename.vcd)
+ 
+ ![gtk wave command](https://user-images.githubusercontent.com/104748496/166215354-785667b9-0a26-4a0f-aecf-0b3d808b88de.PNG)
+
             
