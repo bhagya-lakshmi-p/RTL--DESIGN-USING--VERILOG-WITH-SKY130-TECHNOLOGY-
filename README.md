@@ -238,9 +238,24 @@ Why submodule synthesis?
 
 . divide and conquer when massive.
 
+![sub](https://user-images.githubusercontent.com/104748496/166246973-419830ae-07f2-4759-8d1e-805626193b18.PNG)
+ 
+normal synthesis give hierachy
+
 ![multiple](https://user-images.githubusercontent.com/104748496/166244780-f2ed7d87-4d2a-489a-81c5-d2cef43e797c.PNG)
 
-![multiple_modules](https://user-images.githubusercontent.com/104748496/166245111-42f1bf05-cc66-4357-99bf-a34c70c51e34.PNG)
+![multiple_module mapping hiear](https://user-images.githubusercontent.com/104748496/166248026-92bbc3c4-74cb-4ffb-add8-760797410f39.PNG)
+
+ yosys> synth -top file_name
+          
+          yosys> flatten
+          
+          yosys> abc -liberty ../path_to_library
+          
+          yosys> write_verilog flat_netlist_name
 
 ![Capturmodule flat](https://user-images.githubusercontent.com/104748496/166245923-53fdc44c-dc07-4034-9e60-f97478bc1989.PNG)
+
+![flat show](https://user-images.githubusercontent.com/104748496/166250558-9d186faa-f4cf-4f38-b1a4-74413bade533.PNG)
+
 
