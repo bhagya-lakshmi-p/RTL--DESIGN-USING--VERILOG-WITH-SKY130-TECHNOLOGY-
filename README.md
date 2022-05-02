@@ -107,6 +107,8 @@ here, Yosys used as synthesizer tool.
 
 It is the representation of the design 
   in the form of standard cell
+  
+  Verify the synthesis by passing netlist and testbench to the iverilog and observe the gtkwave by using VCD file. 
 
 ![image](https://user-images.githubusercontent.com/104748496/166227407-47826a6b-6175-4b91-9075-c60fdec14028.png)
 
@@ -159,4 +161,5 @@ What is .lib?
    
    .Guidance offered to the synthesizer is called "constraint".
   
-![image](https://user-images.githubusercontent.com/104748496/166227037-5eda026a-9460-40ee-817d-b24e32a08f49.png)
+![image](https://user-images.githubusercontent.com/104748496/166228722-8cf323e3-fcb2-40fd-939b-c6d49eb2da02.png)
+
