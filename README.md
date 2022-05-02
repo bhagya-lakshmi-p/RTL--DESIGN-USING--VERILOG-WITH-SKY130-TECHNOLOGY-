@@ -111,4 +111,53 @@ It is the representation of the design
 ![image](https://user-images.githubusercontent.com/104748496/166217598-36b77345-5b37-441a-8719-744f707203f4.png) 
 ![image](https://user-images.githubusercontent.com/104748496/166223559-f4442675-dc5e-4480-ae32-994694ddab82.png)
 
+LOGIC SYNTHESIS:
 
+RTL design behavioral representation of required specification written in verilog HDL.
+
+RTL----> synthesis ---->Digital design circuit
+
+Synthesis: RTL to Gate level transformation.
+
+The design is converted into gates and connections are made between gates.
+
+This gives output as a file called netlist.
+
+What is .lib?
+
+> collection of logical modules.
+
+> includes basic logic gates like AND,OR,NOT etc..(standard cells).
+
+> Different flavours of same gate.
+
+    .2 I/P AND GATE
+       -slow
+    
+       -medium 
+       
+       -fast
+    
+    .3 I/P AND GATE 
+    
+       -slow
+    
+       -medium 
+       
+       -fast
+    
+    .4I/P AND GATE
+       
+        ----
+
+        ----
+        
+        ----
+        
+  Selection of cells
+  
+   .Need to guide the synthesizer to select the flavour of cell, that is optimum for the implementation oflogic circuit.
+   
+   .Guidance offered to the synthesizer is called "constraint".
+  
+![image](https://user-images.githubusercontent.com/104748496/166227037-5eda026a-9460-40ee-817d-b24e32a08f49.png)
