@@ -313,21 +313,22 @@ endmodule
 Day3: Combinational and Sequential optimaization
 
 
- Combinational logic optimaization                                           Sequential logic optimaization
+ Combinational logic optimaization                                      Sequential logic optimaization
 
- .squeezing the logic to get the most optimized o/p.                                      .Basic
+ .squeezing the logic to get the most optimized o/p.                               .Basic
     
-    -area and power saving.                                                                   -sequential constant Propagation 
+    -area and power saving.                                                           -sequential constant Propagation 
   
- .Constant propagation.                                                                   .Advanced
+ .Constant propagation.                                                            .Advanced
    
-   -direct optimaization.                                                                     -state optimaization.
+   -direct optimaization.                                                              -state optimaization.
 
- .Boolean logic optimaization.                                                                -retiming.
+ .Boolean logic optimaization.                                                         -retiming.
 
-   -kmap.                                                                                     -sequential cloning.
+   -kmap.                                                                              -sequential cloning.
 
    -quine mccluskey.
+ .
  
  In state optimaization optimizing the unused state
  
