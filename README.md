@@ -258,4 +258,59 @@ normal synthesis give hierachy
 
 ![flat show](https://user-images.githubusercontent.com/104748496/166250558-9d186faa-f4cf-4f38-b1a4-74413bade533.PNG)
 
+           
+           Hierarchical synthesis                                    Flat synthesis
+
+ >> Top module is synthesised in terms of sub-modules.        >> All sub-modules are also expanded and the top module is sysnthesised in terms of standard cells. 
+
+ >> Only the higher level abstraction is required.            >> It has lower abstraction compared to hierarchial synthesis. 
+ 
+                                                              >> Flatten is the command to write out the flat netlist
+In flip-flops, the set/reset logic is very important. They can be either synchronous or asynchronous.
+
+The set/reset is dependant on clock in the synchronus FF, and this logic gets realised on the input (D- input).
+In the HDL code the asynchronous and synchronous reset can be distinguished by the sensistivity list.
+A flipflop with asynchronous reset should have both clock and reset on the sensitiivity list.
+A flipflop with synchronous reset  have only clock on the sensitivity list as the reset is also dependant on the clock.
+
+
+always @(posedge clk, posedge reset)
+begin
+	if(reset)
+		q <= 1'b1;
+	else
+		q <= 1'b1;
+end
+
+
+
+always @( posedge clk )
+begin
+        a <= b;
+        b <= a;
+end
+
+![asyncres dff](https://user-images.githubusercontent.com/104748496/166257962-d6e3aa9f-f06f-46d8-9f3a-ec7fd9626d3c.PNG)
+
+![asy](https://user-images.githubusercontent.com/104748496/166259034-045b55db-e7e2-4df1-b619-b5e04cfb5e65.PNG)
+
+![mul](https://user-images.githubusercontent.com/104748496/166260098-75c1763b-3160-4662-b5ab-15ce3eb3aa09.PNG)
+
+![mul2 static](https://user-images.githubusercontent.com/104748496/166260162-630299c4-c7b7-4b86-8806-1ffa833287ae.PNG)
+
+![mul2](https://user-images.githubusercontent.com/104748496/166260263-89f3a696-c306-4b8c-a2c4-416eda8804df.PNG)
+
+![module mul](https://user-images.githubusercontent.com/104748496/166260742-d7b427c1-f8ff-427d-8e88-64a266547d64.PNG)
+
+module opt_check2 (input a , input b , output y);
+	assign y = a?1:b;
+endmodule
+
+![opt_check2 static](https://user-images.githubusercontent.com/104748496/166261164-06bad6db-1ae8-4241-b2d2-bf8148f3284d.PNG)
+
+![opt_check2 show](https://user-images.githubusercontent.com/104748496/166261308-ede10e36-e75e-408b-8784-1c6280b5e563.PNG)
+
+
+
+
 
