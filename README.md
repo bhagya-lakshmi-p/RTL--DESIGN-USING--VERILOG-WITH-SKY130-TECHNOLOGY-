@@ -310,7 +310,30 @@ endmodule
 
 ![opt_check2 show](https://user-images.githubusercontent.com/104748496/166261308-ede10e36-e75e-408b-8784-1c6280b5e563.PNG)
 
+Day3: Combinational and Sequential optimaization
 
+Combinational logic optimaization                                      Sequential logic optimaization
 
+ .squeezing the logic to get the most optimized o/p.                     .Basic
+    
+    -area and power saving.                                                 -sequential constant Propagation 
+  
+ .Constant propagation.                                                  .Advanced
+   
+   -direct optimaization.                                                   -state optimaization.
+
+ .Boolean logic optimaization.                                              -retiming.
+
+   -kmap.                                                                   -sequential cloning.
+
+   -quine mccluskey.
+ .
+![boo;ean logicopti](https://user-images.githubusercontent.com/104748496/166264898-01e0f369-1907-44a6-ab97-0dd498172eef.PNG)
+
+![constant propogation](https://user-images.githubusercontent.com/104748496/166264983-1187bc88-b2d4-455b-84fc-8b8bfab82069.PNG)
+
+In state optimaization optimizing the unused state.
+
+![seq cons](https://user-images.githubusercontent.com/104748496/166265225-7e7ca874-f3ed-4703-9421-2ddf96b7f35e.PNG)
 
 
