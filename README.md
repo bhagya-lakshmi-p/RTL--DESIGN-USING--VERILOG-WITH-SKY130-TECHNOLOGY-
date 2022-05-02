@@ -60,11 +60,4 @@ To check whether design is meeting all the required specification or not is done
 TB instantiate the design
 TB not having any primary inputs or the primary outputs but design may have one or more than one primary inputs and primary outputs
 
-Test bench
-
-i/p
-
-design
-
-o/p
 ![image](https://user-images.githubusercontent.com/104748496/166209855-65423a99-f0cd-4dca-bd8c-ea263025a322.png)
