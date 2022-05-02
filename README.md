@@ -12,7 +12,7 @@ Day1-Introduction to Verilog RTL design and synthesis
       
       .Labs using Yosys and SKY130 PDKs
       
-day2-timing libs,hierarchical vs flat synthesis and efficient flop coding styles
+Day2-timing libs,hierarchical vs flat synthesis and efficient flop coding styles
 
       .Introduction to timing .libs
       
@@ -36,7 +36,7 @@ Day4-GLS,blocking vs non-blocking and Synthesis-Simulation mismatch
       
       .Labs on Synthesis-Simulation mismatch for blocking statement
       
-If,case,forloop and for generate
+If case, forloop and for generate
       .If case construct
       
       .Labs on incomplete If case
