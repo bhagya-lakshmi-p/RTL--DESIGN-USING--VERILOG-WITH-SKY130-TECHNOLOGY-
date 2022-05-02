@@ -544,7 +544,9 @@ y_int = 8'b0;
 			
 			
 Acknowledgement 
+			
 	1.Kunal Ghosh .
+			
 	2.Shon Taware .
 
 		
