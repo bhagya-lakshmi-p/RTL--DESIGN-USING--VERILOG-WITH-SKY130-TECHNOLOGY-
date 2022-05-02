@@ -62,5 +62,9 @@ TB not having any primary inputs or the primary outputs but design may have one 
 
 Test bench
 
+i/p
+
 design
-![image](https://user-images.githubusercontent.com/104748496/166209489-bd1d269c-f7e1-498b-97a1-2812891bb7d1.png)
+
+o/p
+![image](https://user-images.githubusercontent.com/104748496/166209855-65423a99-f0cd-4dca-bd8c-ea263025a322.png)
