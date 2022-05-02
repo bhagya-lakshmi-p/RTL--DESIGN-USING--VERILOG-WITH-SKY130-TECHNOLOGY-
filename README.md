@@ -71,10 +71,15 @@ iverilog based simulation
 
 Environment setup:
     --->> File setup:to running the labs
+    
              .make directory vlsi(mkdir vlsi)
+             
              .Install vsdflow by gitcloning 
+             
              .my_lib contains all the required library
+             
              .verilog model having the all the standard cell(sc) present in the lib
+             
              .verilog files contain all lab files (experiment)
              
  ![gitclone](https://user-images.githubusercontent.com/104748496/166213657-98ce0bb5-7657-4ba4-860c-1ef77f05bf42.PNG)
