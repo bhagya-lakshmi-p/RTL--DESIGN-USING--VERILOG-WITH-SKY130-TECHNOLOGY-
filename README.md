@@ -313,23 +313,36 @@ endmodule
 Day3: Combinational and Sequential optimaization
 
 
- Combinational logic optimaization                                      Sequential logic optimaization
-
- .squeezing the logic to get the most optimized o/p.                               .Basic
-    
-    -area and power saving.                                                           -sequential constant Propagation 
-  
- .Constant propagation.                                                            .Advanced
-   
-   -direct optimaization.                                                              -state optimaization.
-
- .Boolean logic optimaization.                                                         -retiming.
-
-   -kmap.                                                                              -sequential cloning.
-
-   -quine mccluskey.
+Combinational logic optimaization
  .
+ .squeezing the logic to get the most optimized o/p.
+
+    -area and power saving
+    
+ .Constant propagation.
  
+   -direct optimaization.
+   
+ .Boolean logic optimaization.
+ 
+    -kmap. 
+    
+    -quine mccluskey.
+    
+ Sequential logic optimaization
+ 
+   .Basic 
+     
+      -sequential constant propagation.
+      
+   .Advaned
+   
+      -state optimaization.
+      
+      -retiming.
+      
+      -sequential cloning.
+      
  In state optimaization optimizing the unused state
  
  .
@@ -338,5 +351,27 @@ Day3: Combinational and Sequential optimaization
 ![constant propogation](https://user-images.githubusercontent.com/104748496/166264983-1187bc88-b2d4-455b-84fc-8b8bfab82069.PNG)
 
 ![seq cons](https://user-images.githubusercontent.com/104748496/166265225-7e7ca874-f3ed-4703-9421-2ddf96b7f35e.PNG)
+
+
+ module opt_check2 (input a , input b , output y);
+	assign y = a?1:b;
+ endmodule
+ 
+ ![opt command](https://user-images.githubusercontent.com/104748496/166269374-775b7d7d-4467-41f7-a5db-442ec25de63d.PNG)
+
+show
+
+![opt_check2 static](https://user-images.githubusercontent.com/104748496/166269543-3c3243d6-96b3-4587-819c-6019498c3cd5.PNG)
+
+![opt_check2 show](https://user-images.githubusercontent.com/104748496/166269605-0e429226-2e55-4692-9575-aeadf53ea92a.PNG)
+
+![count _opt](https://user-images.githubusercontent.com/104748496/166269760-76e8a55b-4379-4f58-a188-acce824dbace.PNG)
+
+![count_opt static](https://user-images.githubusercontent.com/104748496/166269834-0573c9b1-e585-4ed5-b7b5-e8c03b1c1298.PNG)
+
+![counter_optshow map](https://user-images.githubusercontent.com/104748496/166269926-c2004b11-213c-4f7e-b9fa-85a44c1ede64.PNG) 
+
+![image](https://user-images.githubusercontent.com/104748496/166270275-9c3ff104-96d3-44af-823d-385588ef2228.png)
+
 
 
