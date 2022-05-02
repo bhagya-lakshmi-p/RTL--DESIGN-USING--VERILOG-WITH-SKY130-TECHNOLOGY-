@@ -61,3 +61,10 @@ TB instantiate the design
 TB not having any primary inputs or the primary outputs but design may have one or more than one primary inputs and primary outputs
 
 ![image](https://user-images.githubusercontent.com/104748496/166209855-65423a99-f0cd-4dca-bd8c-ea263025a322.png)
+
+How the simulator works?
+Simulator looks for the change in values of the input and the output is evaluated for every change in input values.There is no change in output value fot no change in input value.
+
+iverilog based simulation
+
+![image](https://user-images.githubusercontent.com/104748496/166211952-409b67dc-86a0-4d97-9991-96d55c8c517d.png)
