@@ -99,7 +99,11 @@ Environment setup:
  
  load the vcdfile to the simulator to view the wave( gtkwave tb_modulename.vcd)
  
- ![gtk wave command](https://user-images.githubusercontent.com/104748496/166215354-785667b9-0a26-4a0f-aecf-0b3d808b88de.PNG)
+ ![gtk wave command](https://user-images.githubusercontent.com/104748496/166215354-785667b9-0a26-4a0f-aecf-0b3d808b88de.PNG) 
+ 
+ ![good_mux](https://user-images.githubusercontent.com/104748496/166296753-ead76c9f-ad69-4d42-bd13-75dbe942b148.PNG)
+
+![mux](https://user-images.githubusercontent.com/104748496/166297227-348e074a-5659-4032-a14c-aa8d9c915c54.PNG)
 
 Synthesizer is the tool used for converting RTL to netlist. 
 
@@ -193,7 +197,13 @@ show
 
 exit
 
+![yosys](https://user-images.githubusercontent.com/104748496/166297751-fade58de-4ca2-4ee7-9ad6-b8b93b01fdcf.PNG)
+
 ![yosys 1](https://user-images.githubusercontent.com/104748496/166236787-3358b43b-7c35-4f36-810c-b0760b6c8e76.PNG)
+
+![yosys 3](https://user-images.githubusercontent.com/104748496/166297651-51938ae5-4f9a-49c5-9e4a-ee25b423cddc.PNG)
+
+![good_mux generic](https://user-images.githubusercontent.com/104748496/166299525-7cf5a574-ed6e-4d61-939d-075df775ed8c.PNG)
 
 
 Day2: Hierachial and Flat synthesis
@@ -303,7 +313,9 @@ end
 ![module mul](https://user-images.githubusercontent.com/104748496/166260742-d7b427c1-f8ff-427d-8e88-64a266547d64.PNG)
 
 module opt_check2 (input a , input b , output y);
+	
 	assign y = a?1:b;
+	
 endmodule
 
 ![opt_check2 static](https://user-images.githubusercontent.com/104748496/166261164-06bad6db-1ae8-4241-b2d2-bf8148f3284d.PNG)
@@ -352,9 +364,14 @@ Combinational logic optimaization
 
 ![seq cons](https://user-images.githubusercontent.com/104748496/166265225-7e7ca874-f3ed-4703-9421-2ddf96b7f35e.PNG)
 
+![dff_const1](https://user-images.githubusercontent.com/104748496/166298988-f3c6ad9a-7d16-40ef-846c-02966cad57af.PNG)
+
+![diff_const](https://user-images.githubusercontent.com/104748496/166299080-74923bb2-86ce-48c8-b17b-f2a79d13b633.PNG)
 
  module opt_check2 (input a , input b , output y);
+ 
 	assign y = a?1:b;
+	
  endmodule
  
  ![opt command](https://user-images.githubusercontent.com/104748496/166269374-775b7d7d-4467-41f7-a5db-442ec25de63d.PNG)
@@ -523,4 +540,11 @@ y_int = 8'b0;
 ![demux_case](https://user-images.githubusercontent.com/104748496/166294343-aeed2add-1769-4cb9-8abb-50962b08702a.PNG)
 			
 ![demux_case show](https://user-images.githubusercontent.com/104748496/166294780-0df9756f-5592-4a25-9895-69db2705d28d.PNG)
+
+			
+			
+Acknowledgement 
+	1.Kunal Ghosh .
+	2.Shon Taware .
+
 		
