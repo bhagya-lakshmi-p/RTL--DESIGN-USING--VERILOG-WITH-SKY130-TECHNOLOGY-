@@ -230,16 +230,11 @@ based on delay: sky130_fd_sc_hd_and2_0 > sky130_fd_sc_hd_and2_2 > sky130_fd_sc_h
 
 based on power/area: sky130_fd_sc_hd_and2_0 < sky130_fd_sc_hd_and2_2 < sky130_fd_sc_hd_and2_4
 
-
-            Hierarchical synthesis                                    Flat synthesis
-
->> Top module is synthesised in terms of sub-modules.           >> All sub-modules are also expanded and the top module is sysnthesised in terms of standard cells. 
-
->> Only the higher level abstraction is required.               >> It has lower abstraction compared to hierarchial synthesis. 
- 
-                                                                >> Flatten is the command to write out the flat netlist.
-                                                           
+![Capturhire vs fla](https://user-images.githubusercontent.com/104748496/166244109-edff8a9d-6965-48d7-9a54-aac5328c55a1.PNG)
+                                                          
 Why submodule synthesis?
+
 .when we have multiple instance of same module
+
 . divide and conquer when massive.
 
