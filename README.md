@@ -105,15 +105,6 @@ Synthesizer is the tool used for converting RTL to netlist.
 
 here, Yosys used as synthesizer tool.
 
-read_verilog
-
-write_verilog
-
-Netlist file
-
-Design
-
-
 It is the representation of the design 
   in the form of standard cell
 
